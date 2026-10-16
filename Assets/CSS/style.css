@@ -1,0 +1,1601 @@
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #07152f;
+    color: #10203f;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+
+/* Header */
+
+header {
+    min-height: 78px;
+    background: linear-gradient(90deg, #06183d, #0b3f91, #087ed1);
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    box-shadow: 0 4px 10px #00112f99;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    position: relative;
+    display: block;
+    width: 350px;
+    height: 78px;
+    flex-shrink: 0;
+    font-size: 32px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-right: auto;
+}
+
+.know {
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(40px,-50%) ;
+    z-index: 2;
+    text-shadow: 0 0 10px #0f1011;
+}
+
+.big-two {
+    color: #42A5F5;
+    position: absolute;
+    left: 105px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1;
+    z-index: 3;
+    text-shadow: 0 0 10px #000000;
+}
+
+.game {
+    color: white;
+    position: absolute;
+    left: 180px;
+    top: 50%;
+    transform: translate(-39px,-50%) ;
+    z-index: 2;
+    text-shadow: 0 0 10px #0f1011;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 11px 13px;
+    margin: 0 2px;
+    border-radius: 7px;
+    font-size: 13px;
+    white-space: nowrap;
+    transition: 0.2s;
+    font-size: 16px;
+}
+
+nav a:hover {
+    background: #16a9ff;
+    box-shadow: 0 2px 8px #16a9ff99;
+}
+
+
+
+/* Home */
+
+
+.content {
+    min-height: 365px;
+    background: linear-gradient(#06235a55, #0876d155), url("../Medias/Images/home.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 18px #00000088;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 2px solid #7ee9ff55;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #1dcfff55;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: #06235a33;
+}
+
+.maincontent {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.maincontent h1 {
+    font-size: 38px;
+    text-shadow: 0 0 10px #8beaffaa;
+    margin-bottom: 10px;
+}
+
+.maincontent p {
+    font-size: 18px;
+}
+
+/* Featured */
+
+.featured {
+    background-image:
+        linear-gradient(rgba(0, 10, 30, 0.6), rgba(0, 10, 30, 0.6)),
+        url("../Medias/Images/pageimg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 25px 30px 30px;
+}
+
+.featured h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    flex: 1 1 200px;
+    max-width: 23%;
+    min-width: 180px;
+    height: 190px;
+    margin-bottom: 20px;
+    background: #dff7ff;
+    border: 1px solid #75cfff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 10px #006bb333;
+    transition: 0.2s;
+    text-decoration: none;
+    color: #10203f;
+    display: block;
+    position: relative;
+}
+
+.card h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 5px;
+    color: white;
+    background: #06235acc;
+    font-size: 18px;
+    text-align: center;
+    z-index: 2;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px #008de655;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.basics-card .card-image {
+    background-image: url("../Medias/Images/basicshome.png");
+}
+
+.settings-card .card-image {
+    background-image: url("../Medias/Images/settingshome.png");
+}
+
+.performance-card .card-image {
+    background-image: url("../Medias/Images/performancehome.jpg");
+}
+
+.accessories-card .card-image {
+    background-image: url("../Medias/Images/accessorieshome.jpg");
+}
+
+
+/* General Pages */
+
+.page-layout {
+    flex: 1;
+    display: flex;
+    background: #f4f9ff;
+}
+
+.sidebar {
+    width: 190px;
+    background: linear-gradient(180deg, #08265a, #064b98);
+    padding-top: 5px;
+    box-shadow: 2px 0 8px #001b4533;
+    position: fixed;
+    top: 78px;
+    bottom: 48px;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 900;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 17px 14px;
+    min-height: 62px;
+    border-bottom: 1px solid #4dbdff55;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: #0da5e9;
+    padding-left: 19px;
+    box-shadow: 2px 0 6px #72e8ff;
+}
+
+.page-content {
+    padding: 22px 25px;
+    background: #f8fbff;
+    flex: 1;
+    margin-left: 190px;
+    background-image:
+        linear-gradient(rgba(0, 10, 30, 0.5), rgba(0, 1, 3, 0.5)),
+        url("../Medias/Images/pageimg.jpg");
+    
+}
+
+.page-content h1 {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.page-content p {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+#gaming,
+#specs,
+#terms,
+#optimization,
+#suggestions,
+#troubleshooting,
+#build,
+#graphics,
+#fps,
+#resolution,
+#keyboard,
+#mouse,
+#headset,
+#controller,
+#monitor,
+#popular,
+#guides,
+#requirements {
+    scroll-margin-top: 95px;
+}
+
+
+/* Accordions */
+
+.accordion {
+    border-bottom: 2px solid #b7ddf5;
+    margin: 15px 0 ;
+}
+
+.gaming-bg1 {
+    background-image: url("../Medias/Images/basicsimage1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.gaming-bg2 {
+    background-image: url("../Medias/Images/basicsimage2.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.gaming-bg3 {
+    background-image: url("../Medias/Images/basicsimage3.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.settings-bg1 {
+    background-image: url("../Medias/Images/settingsimage1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.settings-bg2 {
+    background-image: url("../Medias/Images/settingsimage2.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.settings-bg3 {
+    background-image: url("../Medias/Images/settingsimage3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.performance-bg1 {
+    background-image: url("../Medias/Images/performanceimage1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.performance-bg2 {
+    background-image: url("../Medias/Images/performanceimage2.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.performance-bg3 {
+    background-image: url("../Medias/Images/performanceimage3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.games-bg1 {
+    background-image: url("../Medias/Images/gamesimage1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.games-bg2 {
+    background-image: url("../Medias/Images/gamesimage2.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.games-bg3 {
+    background-image: url("../Medias/Images/gamesimage3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.accessoriesimage-bg1 {
+    background-image: url("../Medias/Images/accessoriesimage1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.accessoriesimage-bg2 {
+    background-image: url("../Medias/Images/accessoriesimage2.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.accessoriesimage-bg3 {
+    background-image: url("../Medias/Images/accessoriesimage3.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.accessoriesimage-bg4 {
+    background-image: url("../Medias/Images/accessoriesimage4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.accessoriesimage-bg5 {
+    background-image: url("../Medias/Images/accessoriesimage5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+.accordion summary {
+    color: white;
+    font-size: 38px;
+    padding: 20px 0;
+    cursor: pointer;
+    list-style: none;
+}
+
+.accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion summary::after {
+    content: "+";
+    float: right;
+    font-size: 25px;
+}
+
+.accordion[open] summary::after {
+    content: "-";
+}
+
+.accordioncontent {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0 25px;
+}
+
+.price {
+    position: absolute;
+    width: 150px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    background-color: #0095ff;
+    border: 2px solid #0874bf;
+    box-shadow: 0 4px 10px #008ed633;
+    border-radius: 8px;
+    top: 5px;
+    left: 230px;
+    color: white;
+    z-index: 2;
+}
+
+.price h1{
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    color: #000000;
+}
+
+
+
+.accordiontext {
+    flex: 1;
+    font-size: 20px;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    padding: 10px;
+    line-height: 1.6;
+    color: white;
+    text-align: justify;
+    background: rgba(3, 16, 35, 0.82);
+    border: 1px solid #8acfff99;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #00000055;
+}
+
+.accordiontext p{
+    color: white;
+}
+
+.accordiontext h2 {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.accordiontext ul {
+    margin: 10px 0 20px 20px;
+}
+
+.accordiontext li {
+    margin-bottom: 6px;
+    color: white;
+}
+
+.accordiontext table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(3, 16, 35, 0.55);
+    color: white;
+}
+
+.accordiontext th,
+.accordiontext td {
+    border: 1px solid #8acfff88;
+    padding: 12px;
+    text-align: left;
+    color: white;
+    background: rgba(3, 25, 50, 0.55);
+}
+
+.accordionbox {
+    width: 220px;
+    min-height: 100px;
+    padding: 12px;
+    border: 2px solid #0874bf;
+    border-radius: 8px;
+    background: #dff7ff;
+    box-shadow: 0 4px 10px #008ed633;
+    flex-shrink: 0;
+}
+
+.accordionbox h2 {
+    color: #0755a5;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.accordionbox p {
+    font-size: 13px;
+    text-align: justify;
+    color: #000000;
+}
+
+/* Information Box */
+
+.infobox {
+    position: relative;
+    padding: 15px;
+    margin-top: 15px;
+    height: 380px;
+    background: rgba(3, 16, 35, 0.82);
+    border: 1px solid #8acfff99;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #00000055;
+}
+
+.infobox img {
+    width: 350px;
+    height: 350px;
+    border: 2px solid #0874bf;
+    box-shadow: 0 4px 10px #008ed633;
+    border-radius: 8px;
+    float: left;
+    margin-right: 30px;
+}
+
+.infobox h2{
+    margin-top: 15px;
+    color: #0755a5;
+}
+
+/* Tables */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+}
+
+th,
+td {
+    border: 1px solid #0874bf;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #0874bf;
+    color: white;
+}
+
+td {
+    background: #f4fbff;
+}
+
+
+/* About */
+
+
+.about-page {
+    flex: 1;
+    background-image:
+        linear-gradient(rgba(0, 10, 30, 0.5), rgba(0, 1, 3, 0.5)),
+        url("../Medias/Images/pageimg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.about-content {
+    background: rgba(3, 16, 35, 0.82);
+    border: 1px solid #8acfff99;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px #00000055;
+    box-sizing: border-box;
+}
+
+.aboutbox {
+    background: rgba(3, 16, 35, 0.82);
+    border: 1px solid #8acfff99;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px #00000055;
+    box-sizing: border-box;
+}
+
+.about-content table {
+    width: 100%;
+    background: rgba(3, 16, 35, 0.65);
+    border-collapse: collapse;
+}
+
+.about-content th,
+.about-content td {
+    background: transparent;
+    border: 1px solid #8acfff99;
+    padding: 10px;
+    color: white;
+}
+
+.about-content h1 {
+    color: white;
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.about-content p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: white;
+}
+
+.aboutbox h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+/* Contact */
+
+
+.contact-page {
+    flex: 1;
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    background: #f8fbff;
+    box-sizing: border-box;
+    align-items: stretch;
+    border-radius: 8px;
+}
+
+.contact-left {
+    width: 35%;
+    padding: 30px;
+    background: linear-gradient(145deg, #06183d, #0b4388, #087ed1);
+    border: 1px solid #8fcbea;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px #001b4533;
+    box-sizing: border-box;
+    color: white;
+}
+
+.contact-right {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+    background: white;
+    border: 1px solid #c9e4fa;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px #001b4518;
+    box-sizing: border-box;
+}
+
+.contact-page h1 {
+    color: #0755a5;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.contact-left h1 {
+    color: white;
+}
+
+.contact-left h2 {
+    color: #8bd8ff;
+    font-size: 17px;
+    margin: 25px 0 10px;
+}
+
+.contact-left p,
+.contact-left li {
+    color: #e4f2ff;
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.contact-left ul {
+    margin: 20px 0 0 20px;
+}
+
+.contact-left li {
+    margin-bottom: 8px;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-right label {
+    display: block;
+    margin-bottom: 7px;
+    color: #123d70;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact-right input,
+.contact-right select,
+.contact-right textarea {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #c5d9eb;
+    border-radius: 8px;
+    background: #f7faff;
+    color: #10203f;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+.contact-right input,
+.contact-right select {
+    min-height: 45px;
+}
+
+.contact-right textarea {
+    height: 180px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.contact-right input:focus,
+.contact-right select:focus,
+.contact-right textarea:focus {
+    outline: none;
+    border-color: #087ed1;
+    box-shadow: 0 0 0 3px #42a5f533;
+    background: white;
+}
+
+.contact-right input::placeholder,
+.contact-right textarea::placeholder {
+    color: #8a9bb0;
+}
+
+.contact-right button {
+    display: block;
+    width: 100%;
+    margin: 5px auto 0;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #0755a5, #09a8e8);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px #008ed633;
+    transition: 0.2s;
+}
+
+.contact-right button:hover {
+    background: #0874bf;
+    box-shadow: 0 6px 14px #008ed655;
+    transform: translateY(-2px);
+}
+
+.contact-content {
+    margin-left: 0;
+    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 750px) {
+    .contact-page {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .contact-page {
+        padding: 12px;
+        gap: 15px;
+    }
+
+    .contact-left,
+    .contact-right {
+        padding: 20px;
+    }
+
+    .contact-page h1 {
+        font-size: 23px;
+    }
+}
+
+
+
+/* Footer */
+
+
+footer {
+    background: #06235a;
+    color: white;
+    text-align: center;
+    box-shadow: 0 -4px 12px #00000044;
+    z-index: 1000;
+}
+
+.footer-content {
+    padding: 25px 20px;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.footer-content p {
+    color: #c5eaff;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer-links a:hover {
+    color: #48d7ff;
+}
+
+.footer-bottom {
+    background: #041a42;
+    padding: 12px;
+    font-size: 14px;
+}
+
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 8px 9px;
+    }
+
+    .card {
+        width: 48%;
+        margin: 1%;
+    }
+
+    .about-page,
+    .contact-page {
+        display: block;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .contact-left {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #8fcbea;
+    }
+
+    .contact-right {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .page-layout {
+        display: flex;
+     }
+
+    .sidebar {
+    position: fixed;
+    top: 78px;
+    bottom: 48px;
+    left: 0;
+    width: 150px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+     }
+
+     .page-content{
+    margin-left: 150px
+      
+     }
+
+
+    .accordioncontent {
+        display: block;
+     }
+
+    .accordiontext {
+        margin-right: 0;
+        margin-bottom: 15px;
+     }
+
+    .accordionbox {
+        width: auto;
+     }
+
+    .contact-right textarea {
+        width: 100%;
+     }
+
+    table {
+        font-size: 13px;
+     }
+
+
+/* Responsive */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+.page-layout,
+.page-content,
+.about-page,
+.about-content,
+.contact-page,
+.contact-left,
+.contact-right,
+.featured,
+.cards,
+.accordion,
+.accordioncontent,
+.accordiontext,
+.accordionbox,
+.infobox {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.page-content {
+    background-size: cover;
+    background-position: center;
+    overflow-wrap: anywhere;
+}
+
+.accordion summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.accordion summary::after {
+    float: none;
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+.accordioncontent {
+    gap: 16px;
+    min-width: 0;
+}
+
+.accordiontext {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.accordiontext table,
+.about-content table {
+    max-width: 100%;
+}
+
+.accordiontext th,
+.accordiontext td,
+.about-content th,
+.about-content td,
+th,
+td {
+    overflow-wrap: anywhere;
+}
+
+.accordionbox {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.price {
+    position: static;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 42px;
+    height: auto;
+    padding: 8px 14px;
+    margin: 0 0 12px;
+}
+
+.infobox {
+    height: auto;
+    min-height: 0;
+    overflow: auto;
+}
+
+.infobox img {
+    width: min(100%, 350px);
+    height: auto;
+    object-fit: cover;
+}
+
+.contact-right input,
+.contact-right select,
+.contact-right textarea {
+    max-width: 100%;
+}
+
+table {
+    max-width: 100%;
+}
+
+@media (max-width: 900px) {
+    header {
+        min-height: 0;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px 12px;
+    }
+
+    .logo {
+        width: min(350px, 100%);
+        height: 65px;
+        margin: 0 auto;
+        flex-shrink: 1;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    nav a {
+        white-space: normal;
+        text-align: center;
+        font-size: 14px;
+        padding: 9px 10px;
+        margin: 0;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .contact-page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+
+    .page-content {
+        padding: 20px;
+    }
+
+    .page-content h1,
+    .about-content h1 {
+        font-size: clamp(28px, 4vw, 38px);
+    }
+
+    .page-content p,
+    .about-content p {
+        font-size: clamp(16px, 2.2vw, 20px);
+    }
+
+    .accordion summary {
+        font-size: clamp(25px, 4vw, 34px);
+    }
+
+    .accordiontext {
+        font-size: 17px;
+        margin-right: 0;
+    }
+
+    .accordionbox {
+        width: 100%;
+        flex-shrink: 1;
+    }
+
+    .infobox img {
+        float: none;
+        display: block;
+        margin: 0 auto 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 6px 10px 10px;
+    }
+
+    .logo {
+        width: 290px;
+        max-width: 100%;
+        height: 58px;
+        transform: scale(0.9);
+        transform-origin: center;
+        margin: -2px auto;
+    }
+
+    .know {
+        left: 0;
+        transform: translate(24px, -50%);
+        font-size: 25px;
+    }
+
+    .big-two {
+        left: 78px;
+        font-size: 57px;
+    }
+
+    .game {
+        left: 135px;
+        transform: translate(-24px, -50%);
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        flex: 0 1 auto;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .content {
+        min-height: 300px;
+        padding: 24px 12px;
+    }
+
+    .maincontent {
+        padding: 12px;
+        max-width: 100%;
+    }
+
+    .maincontent h1 {
+        font-size: clamp(25px, 7vw, 34px);
+        overflow-wrap: anywhere;
+    }
+
+    .maincontent p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .featured {
+        padding: 20px 14px;
+    }
+
+    .featured h2 {
+        font-size: 24px;
+    }
+
+    .cards {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .card {
+        height: 190px;
+    }
+
+    .page-layout {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sidebar {
+        position: static;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        max-height: 220px;
+        padding: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        flex-shrink: 1;
+    }
+
+    .sidebar a {
+        min-height: 0;
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .sidebar a:hover {
+        padding-left: 18px;
+    }
+
+    .page-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 18px 14px;
+    }
+
+    .page-content h1 {
+        font-size: 29px;
+        line-height: 1.2;
+    }
+
+    .page-content p {
+        font-size: 17px;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .accordion {
+        margin: 12px 0;
+    }
+
+    .accordion summary {
+        padding: 15px 0;
+        font-size: 23px;
+        line-height: 1.3;
+        gap: 8px;
+    }
+
+    .accordion summary::after {
+        font-size: 23px;
+    }
+
+    .accordioncontent {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 8px 0 18px;
+        gap: 12px;
+    }
+
+    .accordiontext {
+        width: 100%;
+        margin: 0 0 12px;
+        padding: 12px;
+        font-size: 16px;
+        line-height: 1.55;
+        text-align: left;
+    }
+
+    .accordiontext h2,
+    .accordionbox h2 {
+        font-size: 20px;
+    }
+
+    .accordiontext ul {
+        margin-left: 20px;
+        padding-left: 0;
+    }
+
+    .accordiontext table,
+    .about-content table,
+    table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: normal;
+    }
+
+    .accordiontext th,
+    .accordiontext td,
+    .about-content th,
+    .about-content td,
+    th,
+    td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .accordionbox {
+        width: 100%;
+        min-height: 0;
+        padding: 12px;
+    }
+
+    .price {
+        position: static;
+        width: fit-content;
+        max-width: 100%;
+        margin: 0 0 12px;
+        font-size: 15px;
+    }
+
+    .infobox {
+        height: auto;
+        padding: 12px;
+        overflow: auto;
+    }
+
+    .infobox img {
+        float: none;
+        display: block;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 0 auto 16px;
+    }
+
+    .infobox h2 {
+        margin-top: 8px;
+        font-size: 21px;
+    }
+
+    .about-page {
+        padding: 14px;
+        background-attachment: scroll;
+    }
+
+    .about-content,
+    .aboutbox {
+        padding: 14px;
+    }
+
+    .about-content h1 {
+        font-size: 29px;
+        line-height: 1.2;
+    }
+
+    .about-content p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 18px;
+    }
+
+    .contact-page {
+        padding: 14px;
+        gap: 14px;
+    }
+
+    .contact-left,
+    .contact-right {
+        padding: 18px;
+        min-width: 0;
+    }
+
+    .contact-page h1 {
+        font-size: 23px;
+    }
+
+    .contact-right textarea {
+        height: 150px;
+    }
+
+    .footer-content {
+        padding: 22px 14px;
+    }
+
+    .footer-content h3 {
+        font-size: 21px;
+    }
+
+    .footer-links {
+        gap: 12px 16px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo {
+        transform: scale(0.78);
+        margin: -5px auto;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 7px 6px;
+    }
+
+    .page-content {
+        padding: 14px 10px;
+    }
+
+    .accordion summary {
+        font-size: 20px;
+    }
+
+    .accordiontext {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .contact-page {
+        padding: 10px;
+    }
+
+    .contact-left,
+    .contact-right {
+        padding: 14px;
+    }
+}
